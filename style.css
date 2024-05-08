@@ -1,0 +1,237 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "poppins", sans-serif;
+    box-sizing: border-box;
+}
+
+.header {
+    display: flex;
+  align-items: center;
+  justify-content: space-between;
+    /* height: 100vh;
+    width: 100%;
+    padding: 0 4%;
+    position: relative; */
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    flex: 0 0 140px;
+    position: relative;
+    color: #333;
+    width: 150px;
+    height: auto;
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-color: #ff5e00;
+  border-radius: 50%;
+    padding: 10px;
+    z-index: 2;
+}
+
+.nav-links {
+    position: absolute;
+    top: 4%;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 4%;
+    list-style: none;
+    display: flex;
+    z-index: 2; 
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 4%;
+}
+
+.nav-links li {
+    margin: 0 10px;
+    padding: 10px;
+    background-color:orange;
+    border-radius: 5px;
+  }
+
+.nav-links li a {
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    font-weight: 500;
+     position: relative;
+    padding: 5px;
+
+} 
+.nav-links li a:hover {
+  background-color: rgba(255, 255, 255, 0.514); /* Add subtle hover effect */
+}
+/* .nav-links li a::after {
+    content: '';
+    background: #ff3d00;
+    width: 0;
+    height: 2px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: width 0.5s;
+} */
+.nav-links li:last-child {
+    background-color: #ff5e00;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+  }
+.btn {
+    background: #ff3d00;
+    color: #fff;
+    padding: 10px 30px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.content {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    max-width: 900px;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    padding-top: 30px;
+}
+
+.content h1 {
+    font-size: 65px;
+    font-weight: 700;
+    margin-bottom: 40px;
+    color: #0004ffb6;
+}
+
+.content form {
+    background: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    display: flex;
+}
+
+.content form input {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 0 20px;
+    font-size: 18px;
+}
+
+.content form button {
+    background: #ff3d00;
+    color: #fff;
+    padding: 15px 40px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+#search-input {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+
+.category-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+    z-index: 2;
+}
+.category:hover {
+    background-color: rgba(131, 9, 9, 0.507);
+  }
+.category {
+    width: 80px;
+    height: 80px;
+    background: rgba(255, 60, 0, 0.747);
+    margin: 0 10px;
+    font-size: 12px;
+    display: flex;
+    border: 1px solid #ccc;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 2;
+}
+
+.category img {
+    width: 30px;
+    height: 25px;
+}
+
+.back-video {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    opacity: 0.5;
+    
+}
+
+@media (max-aspect-ratio: 16/9) and (max-width: 768px) {
+    /* Styles for screens with a maximum aspect ratio of 16/9 and a maximum width of 768px */
+    .header{
+        display: block;
+        align-items: center;
+        justify-content: center;
+    }
+    .nav-links{
+         /* position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 2; */
+        display: flex;
+        position: fixed;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        /* background-color: rgba(0, 0, 0, 0.5); */
+        z-index: 1;
+        
+    
+    } 
+    .nav-links li {
+        margin: 0;
+        padding: 10px;
+        background-color: orange;
+        border-radius: 5px;
+      }
+    .nav-links li a:hover {
+        background-color: rgba(255, 255, 255, 0.514); /* Add subtle hover effect */
+           }
+           .nav-links li:last-child {
+            background-color: #ff5e00;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+          }
+    .back-video {
+      width: auto;
+      height: 100;
+    }
+  
+    .category-list {
+      margin: 0 auto;
+    }
+  }
+ 
